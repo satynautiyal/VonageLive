@@ -20,9 +20,8 @@ test:
   password: 'postgres'
 
 production:
-  <<: *default
-  database: vonage_live
-  #username: rails
-
-#  password: <%= ENV['EXAMPLE_DATABASE_PASSWORD'] %>
-  password: 'babludev'
+  database: 'd9d1kvivd4rc1n'
+  username: 'kulcxmvhsztdgn'
+  port: 5432
+  uri: 'postgres://kulcxmvhsztdgn:8349030149598b2b6941170ac9d28424b8e47b45506b0093f441f988cba33f3b@ec2-52-86-56-90.compute-1.amazonaws.com:5432/d9d1kvivd4rc1n'
+  password: '8349030149598b2b6941170ac9d28424b8e47b45506b0093f441f988cba33f3b'

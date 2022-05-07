@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
+
+<div  id="videos" data-controller="vonage"
+      data-vonage-api-key="<%= ENV["API_KEY"] %>"
+      data-vonage-session-id= "<%= @room.vonage_session_id%>"
+      data-vonage-token="<%= @token %>"
+      data-vonage-name="<%= current_user.email%>"
+      data-vonage-user-id= <%= current_user.id%>>
+</div>
+
+<script>console.log("<%= @response %>");</script>

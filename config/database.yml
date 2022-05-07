@@ -1,1 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # host: localhost
 
+development:
+  <<: *default
+  database: vonage_live
+  # username: postgres
+  password: password
+  # host: localhost
+
+test:
+  <<: *default
+  database: vonage_live_test
+  # username: postgres
+  password: 'postgres'
+
+production:
+  <<: *default
+  database: vonage_live
+  #username: rails
+
+#  password: <%= ENV['EXAMPLE_DATABASE_PASSWORD'] %>
+  password: 'babludev'

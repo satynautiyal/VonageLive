@@ -9,6 +9,7 @@
 <%= link_to 'Back', rooms_path %>
 
 <div  id="videos" data-controller="vonage"
+      data-vonage-secret-key="<%= ENV["SECRET_KEY"]%>"
       data-vonage-api-key="<%= ENV["API_KEY"] %>"
       data-vonage-session-id= "<%= @room.vonage_session_id%>"
       data-vonage-token="<%= @token %>"
@@ -16,4 +17,6 @@
       data-vonage-user-id= <%= current_user.id%>>
 </div>
 
-<script>console.log("<%= @response %>");</script>
+<script>
+
+</script>

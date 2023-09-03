@@ -46,7 +46,7 @@ class RoomsController < ApplicationController
     request.body = '{
       "sessionId": "'+"#{@room.vonage_session_id}"+'",
       
-      "maxDuration": 5400,
+      "maxDuration": 10,
       "outputs": {
         "hls": {
           "dvr": false,
@@ -56,14 +56,9 @@ class RoomsController < ApplicationController
           "id": "foo",
           "serverUrl": "rtmps://myfooserver/myfooapp",
           "streamName": "myfoostream"
-        },
-        {
-          "id": "bar",
-          "serverUrl": "rtmp://mybarserver/mybarapp",
-          "streamName": "mybarstream"
         }]
       },
-      "resolution": "640x480",
+      "resolution": "1280x720",
       "streamMode" : "auto"
     }'
 

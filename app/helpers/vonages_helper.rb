@@ -1,0 +1,2 @@
+module VonagesHelper
+end

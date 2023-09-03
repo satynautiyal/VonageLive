@@ -1,0 +1,17 @@
+<%= form_with(model: vonage) do |form| %>
+  <% if vonage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vonage.errors.count, "error") %> prohibited this vonage from being saved:</h2>
+
+      <ul>
+        <% vonage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

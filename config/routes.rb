@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vonages
   resources :rooms
   devise_for :users
   root "rooms#index"

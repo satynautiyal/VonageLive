@@ -15,6 +15,29 @@ export default class extends Controller {
     this.sessionId = this.data.get("sessionId")
     this.token = this.data.get("token")
     this.initializeSession()
+
+  this.broadcastOptions = {
+    outputs: {
+      hls: {},
+      rtmp: [
+        {
+          id: "foo",
+          serverUrl: "rtmp://myfooserver/myfooapp",
+          streamName: "myfoostream",
+        },
+        {
+          id: "bar",
+          serverUrl: "rtmp://mybarserver/mybarapp",
+          streamName: "mybarstream",
+        },
+      ],
+    },
+    maxDuration: 5400,
+    resolution: "640x480",
+    layout: {
+      type: "verticalPresentation",
+    },
+  };
   }
 
   disconnect() {
